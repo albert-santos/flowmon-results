@@ -249,7 +249,7 @@ def main(argv):
             if flow.rxBitrate is None:
                 print("\tRX bitrate: None")
             else:
-                print("\tRX bitrate: %.2f kbit/s\n" % (flow.rxBitrate*1e-3,))
+                print("\tRX bitrate: %.2f kbit/s" % (flow.rxBitrate*1e-3,))
 
                 with open('flow.txt', 'a') as arquivo:
                     arquivo.write("\tRX bitrate: %.2f kbit/s\n" % (flow.rxBitrate*1e-3,))
