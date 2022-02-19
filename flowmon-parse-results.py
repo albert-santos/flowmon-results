@@ -7,6 +7,8 @@ try:
 except ImportError:
     from xml.etree import ElementTree
 
+
+
 def parse_time_ns(tm):
     if tm.endswith('ns'):
         return long(tm[:-4])
@@ -197,13 +199,13 @@ class Simulation(object):
                 flow_map[flowId].probe_stats_unsorted.append(s)
 
 
-def main(argv):
-    file_obj = open('switch.flowmon')
+def main(flow_mon, flow_txt):
+    file_obj = open(flow_mon)
 
-    with open("flow.txt",'w') as f: # Limpando  o arquivo
+    with open(flow_txt,'w') as f: # Limpando  o arquivo
         pass
 
-    with open('flow.txt', 'a') as arquivo:
+    with open(flow_txt, 'a') as arquivo:
                     arquivo.write('Reading XML file\n')
 
     print("Reading XML file ")
@@ -224,7 +226,7 @@ def main(argv):
                 sys.stdout.flush()
     print(" done.")
 
-    with open('flow.txt', 'a') as arquivo:
+    with open(flow_txt, 'a') as arquivo:
                     arquivo.write(' done.\n')
 
 
@@ -235,7 +237,7 @@ def main(argv):
             print ("FlowID: %i (%s %s/%s --> %s/%i)" % \
                 (flow.flowId, proto, t.sourceAddress, t.sourcePort, t.destinationAddress, t.destinationPort))
 
-            with open('flow.txt', 'a') as arquivo:
+            with open(flow_txt, 'a') as arquivo:
                     arquivo.write("FlowID: %i (%s %s/%s --> %s/%i)\n" % \
                 (flow.flowId, proto, t.sourceAddress, t.sourcePort, t.destinationAddress, t.destinationPort))
             
@@ -243,7 +245,7 @@ def main(argv):
                 print("\tTX bitrate: None")
             else:
                 print("\tTX bitrate: %.2f kbit/s" % (flow.txBitrate*1e-3,))
-                with open('flow.txt', 'a') as arquivo:
+                with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tTX bitrate: %.2f kbit/s\n" % (flow.txBitrate*1e-3,))
 
             if flow.rxBitrate is None:
@@ -251,7 +253,7 @@ def main(argv):
             else:
                 print("\tRX bitrate: %.2f kbit/s" % (flow.rxBitrate*1e-3,))
 
-                with open('flow.txt', 'a') as arquivo:
+                with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tRX bitrate: %.2f kbit/s\n" % (flow.rxBitrate*1e-3,))
 
             if flow.delayMean is None:
@@ -259,7 +261,7 @@ def main(argv):
             else:
                 print("\tMean Delay: %.2f ms" % (flow.delayMean*1e3,))
 
-                with open('flow.txt', 'a') as arquivo:
+                with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tMean Delay: %.2f ms\n" % (flow.delayMean*1e3,))
 
             if flow.jitterMean is None:
@@ -267,7 +269,7 @@ def main(argv):
             else:
                 print("\tMean Jitter: %.2f ms" % (flow.jitterMean*1e3,))
 
-                with open('flow.txt', 'a') as arquivo:
+                with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tMean Jitter: %.2f ms\n" % (flow.jitterMean*1e3,))
 
             if flow.packetLossRatio is None:
@@ -275,9 +277,15 @@ def main(argv):
             else:
                 print ("\tPacket Loss Ratio: %.2f %%" % (flow.packetLossRatio*100))
 
-                with open('flow.txt', 'a') as arquivo:
+                with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tPacket Loss Ratio: %.2f %%\n" % (flow.packetLossRatio*100))
 
 
 if __name__ == '__main__':
-    main(sys.argv)
+
+    for i in range(1, 25):
+
+        flow_mon = f'switch_SA{i}.flowmon'
+        flow_txt = f'flow_SA{i}.txt'
+
+        main(flow_mon, flow_txt)
