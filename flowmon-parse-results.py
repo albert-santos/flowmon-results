@@ -285,7 +285,7 @@ if __name__ == '__main__':
 
     for i in range(1, 25):
 
-        flow_mon = f'switch_SA{i}.flowmon'
-        flow_txt = f'flow_SA{i}.txt'
+        flow_mon = f'switch_SA_flowmon/switch_SA{i}.flowmon'
+        flow_txt = f'flows_SA/flow_SA{i}.txt'
 
         main(flow_mon, flow_txt)
