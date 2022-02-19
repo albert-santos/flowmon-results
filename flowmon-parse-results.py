@@ -243,6 +243,8 @@ def main(flow_mon, flow_txt):
             
             if flow.txBitrate is None:
                 print("\tTX bitrate: None")
+                with open(flow_txt, 'a') as arquivo:
+                    arquivo.write("\tTX bitrate: None\n")
             else:
                 print("\tTX bitrate: %.2f kbit/s" % (flow.txBitrate*1e-3,))
                 with open(flow_txt, 'a') as arquivo:
@@ -250,6 +252,8 @@ def main(flow_mon, flow_txt):
 
             if flow.rxBitrate is None:
                 print("\tRX bitrate: None")
+                with open(flow_txt, 'a') as arquivo:
+                    arquivo.write("\tRX bitrate: None\n")
             else:
                 print("\tRX bitrate: %.2f kbit/s" % (flow.rxBitrate*1e-3,))
 
@@ -258,6 +262,8 @@ def main(flow_mon, flow_txt):
 
             if flow.delayMean is None:
                 print("\tMean Delay: None")
+                with open(flow_txt, 'a') as arquivo:
+                    arquivo.write("\tMean Delay: None\n")
             else:
                 print("\tMean Delay: %.2f ms" % (flow.delayMean*1e3,))
 
@@ -266,6 +272,8 @@ def main(flow_mon, flow_txt):
 
             if flow.jitterMean is None:
                 print("\tMean Jitter: None")
+                with open(flow_txt, 'a') as arquivo:
+                    arquivo.write("\tMean Jitter: None\n")
             else:
                 print("\tMean Jitter: %.2f ms" % (flow.jitterMean*1e3,))
 
@@ -274,6 +282,9 @@ def main(flow_mon, flow_txt):
 
             if flow.packetLossRatio is None:
                 print ("\tPacket Loss Ratio: None")
+
+                with open(flow_txt, 'a') as arquivo:
+                    arquivo.write("\tPacket Loss Ratio: None\n")
             else:
                 print ("\tPacket Loss Ratio: %.2f %%" % (flow.packetLossRatio*100))
 
