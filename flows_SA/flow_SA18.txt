@@ -258,3 +258,5 @@ FlowID: 43 (UDP 7.0.0.28/49153 --> 1.0.0.2/900)
 	Mean Delay: None
 	Mean Jitter: None
 	Packet Loss Ratio: None
+
+Média da taxa de pacotes perdidos: 4.84%

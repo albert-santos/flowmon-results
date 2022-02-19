@@ -229,7 +229,8 @@ def main(flow_mon, flow_txt):
     with open(flow_txt, 'a') as arquivo:
                     arquivo.write(' done.\n')
 
-
+    packet_loss_ratio = 0
+    numero_flows = 0
     for sim in sim_list:
         for flow in sim.flows:
             t = flow.fiveTuple
@@ -291,6 +292,15 @@ def main(flow_mon, flow_txt):
                 with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tPacket Loss Ratio: %.2f %%\n" % (flow.packetLossRatio*100))
 
+                packet_loss_ratio += flow.packetLossRatio
+            
+            numero_flows += 1
+
+    numero_usuarios = numero_flows - 16 # Retirando comunicações TCP
+    print(numero_usuarios)
+    packet_loss_ratio = packet_loss_ratio / numero_usuarios
+    with open(flow_txt, 'a') as arquivo:
+                    arquivo.write(f'\nMédia da taxa de pacotes perdidos: {packet_loss_ratio*100:.2f}%\n')
 
 if __name__ == '__main__':
 

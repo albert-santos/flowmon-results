@@ -210,3 +210,5 @@ FlowID: 35 (UDP 7.0.0.20/49153 --> 1.0.0.2/900)
 	Mean Delay: 19.66 ms
 	Mean Jitter: 3.06 ms
 	Packet Loss Ratio: 0.00 %
+
+Média da taxa de pacotes perdidos: 1.49%
