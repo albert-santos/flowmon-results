@@ -229,8 +229,15 @@ def main(flow_mon, flow_txt):
     with open(flow_txt, 'a') as arquivo:
                     arquivo.write(' done.\n')
 
+    tx_bitrate = 0
+    rx_bitrate = 0
+    mean_delay = 0
+    mean_jitter = 0
     packet_loss_ratio = 0
     numero_flows = 0
+    usuarios_nao_atendidos = 0
+
+
     for sim in sim_list:
         for flow in sim.flows:
             t = flow.fiveTuple
@@ -251,6 +258,10 @@ def main(flow_mon, flow_txt):
                 with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tTX bitrate: %.2f kbit/s\n" % (flow.txBitrate*1e-3,))
 
+                if proto == 'UDP':
+                    tx_bitrate += (flow.txBitrate*1e-3)
+
+
             if flow.rxBitrate is None:
                 print("\tRX bitrate: None")
                 with open(flow_txt, 'a') as arquivo:
@@ -261,6 +272,9 @@ def main(flow_mon, flow_txt):
                 with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tRX bitrate: %.2f kbit/s\n" % (flow.rxBitrate*1e-3,))
 
+                if proto == 'UDP':
+                    rx_bitrate += (flow.rxBitrate*1e-3)
+
             if flow.delayMean is None:
                 print("\tMean Delay: None")
                 with open(flow_txt, 'a') as arquivo:
@@ -270,6 +284,9 @@ def main(flow_mon, flow_txt):
 
                 with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tMean Delay: %.2f ms\n" % (flow.delayMean*1e3,))
+                
+                if proto == 'UDP':
+                    mean_delay += (flow.delayMean*1e3)
 
             if flow.jitterMean is None:
                 print("\tMean Jitter: None")
@@ -280,6 +297,9 @@ def main(flow_mon, flow_txt):
 
                 with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tMean Jitter: %.2f ms\n" % (flow.jitterMean*1e3,))
+
+                if proto == 'UDP':
+                    mean_jitter += (flow.jitterMean*1e3)
 
             if flow.packetLossRatio is None:
                 print ("\tPacket Loss Ratio: None")
@@ -292,15 +312,37 @@ def main(flow_mon, flow_txt):
                 with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tPacket Loss Ratio: %.2f %%\n" % (flow.packetLossRatio*100))
 
-                packet_loss_ratio += flow.packetLossRatio
+                if proto == 'UDP':
+                    packet_loss_ratio += flow.packetLossRatio
             
             numero_flows += 1
 
     numero_usuarios = numero_flows - 16 # Retirando comunicações TCP
-    print(numero_usuarios)
+
+    tx_bitrate = tx_bitrate / numero_usuarios
+    rx_bitrate = rx_bitrate / numero_usuarios
+    mean_delay = mean_delay / numero_usuarios
+    mean_jitter = mean_jitter / numero_usuarios
     packet_loss_ratio = packet_loss_ratio / numero_usuarios
+
     with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'\nMédia da taxa de pacotes perdidos: {packet_loss_ratio*100:.2f}%\n')
+                    arquivo.write(f'\n\nMétricas no Geral: \n')
+
+    with open(flow_txt, 'a') as arquivo:
+                    arquivo.write(f'TX bitrate média: {tx_bitrate:.2f} kbit/s\n')
+
+    with open(flow_txt, 'a') as arquivo:
+                    arquivo.write(f'RX bitrate média: {rx_bitrate:.2f} kbit/s\n')
+
+    with open(flow_txt, 'a') as arquivo:
+                    arquivo.write(f'Delay Médio: {mean_delay:.2f} ms\n')
+
+    with open(flow_txt, 'a') as arquivo:
+                    arquivo.write(f'Jitter Médio: {mean_jitter:.2f} ms\n')
+
+    with open(flow_txt, 'a') as arquivo:
+                    arquivo.write(f'Média da taxa de pacotes perdidos: {packet_loss_ratio*100:.2f}%\n')
+
 
 if __name__ == '__main__':
 

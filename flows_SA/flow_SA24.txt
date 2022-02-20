@@ -283,4 +283,10 @@ FlowID: 47 (UDP 7.0.0.32/49153 --> 1.0.0.2/900)
 	Mean Jitter: None
 	Packet Loss Ratio: None
 
+
+Métricas no Geral: 
+TX bitrate média: 168.79 kbit/s
+RX bitrate média: 137.93 kbit/s
+Delay Médio: 83.03 ms
+Jitter Médio: 30.00 ms
 Média da taxa de pacotes perdidos: 4.13%
