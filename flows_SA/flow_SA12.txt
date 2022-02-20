@@ -206,10 +206,10 @@ FlowID: 34 (UDP 7.0.0.19/49153 --> 1.0.0.2/900)
 	Packet Loss Ratio: 2.27 %
 
 
-    M√âTRICAS NO GERAL: 
-TX bitrate m√©dia: 168.79 kbit/s
-RX bitrate m√©dia: 156.77 kbit/s
-Delay M√©dio: 50.00 ms
-Jitter M√©dio: 24.97 ms
-M√©dia da taxa de pacotes perdidos: 3.41%
-Usu√°rios n√£o atendidos: 0
+    M…TRICAS NO GERAL: 
+TX bitrate mÈdia: 168.79 kbit/s
+RX bitrate mÈdia: 156.77 kbit/s
+Delay MÈdio: 50.00 ms
+Jitter MÈdio: 24.97 ms
+MÈdia da taxa de pacotes perdidos: 3.41%
+Usu·rios n„o atendidos: 0

@@ -1,5 +1,5 @@
 from __future__ import division
-from curses import longname
+from resultados_do_dia import resultados_do_dia
 import sys
 import os
 try:
@@ -235,7 +235,7 @@ def main(flow_mon, flow_txt):
     mean_jitter = 0
     packet_loss_ratio = 0
     numero_flows = 0
-    usuarios_nao_atendidos = 0
+    contador_usuarios_nao_atendidos = 0
 
 
     for sim in sim_list:
@@ -267,7 +267,7 @@ def main(flow_mon, flow_txt):
                 with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tRX bitrate: None\n")
 
-                usuarios_nao_atendidos += 1
+                contador_usuarios_nao_atendidos += 1
             else:
                 print("\tRX bitrate: %.2f kbit/s" % (flow.rxBitrate*1e-3,))
 
@@ -338,22 +338,38 @@ def main(flow_mon, flow_txt):
 
     with open(flow_txt, 'a') as arquivo:
                     arquivo.write(f'Delay Médio: {mean_delay:.2f} ms\n')
+                    delay.append(mean_delay)
 
     with open(flow_txt, 'a') as arquivo:
                     arquivo.write(f'Jitter Médio: {mean_jitter:.2f} ms\n')
+                    jitter.append(mean_jitter)
 
     with open(flow_txt, 'a') as arquivo:
                     arquivo.write(f'Média da taxa de pacotes perdidos: {packet_loss_ratio*100:.2f}%\n')
+                    pacotes_perdidos.append(packet_loss_ratio*100)
 
     with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'Usuários não atendidos: {usuarios_nao_atendidos}\n')
+                    arquivo.write(f'Usuários não atendidos: {contador_usuarios_nao_atendidos}\n')
+                    usuarios_nao_atendidos.append(contador_usuarios_nao_atendidos)
 
 
 if __name__ == '__main__':
+
+    delay = []
+    jitter = []
+    pacotes_perdidos = []
+    usuarios_nao_atendidos = []
 
     for i in range(1, 25):
 
         flow_mon = f'switch_SA_flowmon/switch_SA{i}.flowmon'
         flow_txt = f'flows_SA/flow_SA{i}.txt'
 
+        # flow_mon = f'switch_HDSO_flowmon/switch_HDSO{i}.flowmon'
+        # flow_txt = f'flows_HDSO/flow_HDSO{i}.txt'
+
         main(flow_mon, flow_txt)
+
+    caminho_resultados_dia = f'flows_SA/Resultados_dia.txt'
+    # caminho_resultados_dia = f'flows_HDSO/Resultados_dia.txt'
+    resultados_do_dia(caminho_resultados_dia, delay, jitter, pacotes_perdidos, usuarios_nao_atendidos)          
