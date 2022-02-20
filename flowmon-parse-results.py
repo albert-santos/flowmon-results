@@ -266,6 +266,8 @@ def main(flow_mon, flow_txt):
                 print("\tRX bitrate: None")
                 with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tRX bitrate: None\n")
+
+                usuarios_nao_atendidos += 1
             else:
                 print("\tRX bitrate: %.2f kbit/s" % (flow.rxBitrate*1e-3,))
 
@@ -326,7 +328,7 @@ def main(flow_mon, flow_txt):
     packet_loss_ratio = packet_loss_ratio / numero_usuarios
 
     with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'\n\nMétricas no Geral: \n')
+                    arquivo.write(f'\n\n    MÉTRICAS NO GERAL: \n')
 
     with open(flow_txt, 'a') as arquivo:
                     arquivo.write(f'TX bitrate média: {tx_bitrate:.2f} kbit/s\n')
@@ -342,6 +344,9 @@ def main(flow_mon, flow_txt):
 
     with open(flow_txt, 'a') as arquivo:
                     arquivo.write(f'Média da taxa de pacotes perdidos: {packet_loss_ratio*100:.2f}%\n')
+
+    with open(flow_txt, 'a') as arquivo:
+                    arquivo.write(f'Usuários não atendidos: {usuarios_nao_atendidos}\n')
 
 
 if __name__ == '__main__':
