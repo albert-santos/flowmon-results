@@ -360,6 +360,11 @@ if __name__ == '__main__':
     pacotes_perdidos = []
     usuarios_nao_atendidos = []
 
+    flow_mon = f'switch_HDSO_flowmon/switch_HDSO4.flowmon'
+    flow_txt = f'flows_HDSO/flow_HDSO4.txt'
+
+    main(flow_mon, flow_txt)
+
     for i in range(1, 25):
 
         flow_mon = f'switch_SA_flowmon/switch_SA{i}.flowmon'
