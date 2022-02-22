@@ -360,8 +360,8 @@ if __name__ == '__main__':
     pacotes_perdidos = []
     usuarios_nao_atendidos = []
 
-    flow_mon = f'switch_HDSO_flowmon/switch_HDSO4.flowmon'
-    flow_txt = f'flows_HDSO/flow_HDSO4.txt'
+    flow_mon = f'switch_HDSO_flowmon/switch_HDSO1.flowmon'
+    flow_txt = f'flows_HDSO/flow_HDSO1.txt'
 
     main(flow_mon, flow_txt)
 
