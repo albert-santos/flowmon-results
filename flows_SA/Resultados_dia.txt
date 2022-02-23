@@ -1,6 +1,6 @@
     RESULTADOS DO DIA: 
 
-Delay médio do dia: 146.20
-Jitter médio do dia: 23.53
-Média de pacotes perdidos do dia: 7.45%
-Média de usuários não atendidos do dia: 3.29
+Delay médio do dia: 141.81
+Jitter médio do dia: 23.24
+Média de pacotes perdidos do dia: 6.51%
+Média de usuários não atendidos do dia: 3.04

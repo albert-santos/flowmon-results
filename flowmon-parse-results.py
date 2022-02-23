@@ -355,26 +355,52 @@ def main(flow_mon, flow_txt):
 
 if __name__ == '__main__':
 
+    print('\n')
+    linha = '-'*50
+    print(linha)
+    print('FLOWMON PARSE RESULTS:'.center(50))
+    print(linha)
+
     delay = []
     jitter = []
     pacotes_perdidos = []
     usuarios_nao_atendidos = []
 
-    flow_mon = f'switch_HDSO_flowmon/switch_HDSO1.flowmon'
-    flow_txt = f'flows_HDSO/flow_HDSO1.txt'
+    # Laço que contém o input que pede para o usuário informar o algoritmo que será utilizado
+    # O laço é quebrado apenas quando o usuário informa um algoritmo correto
+    while(1):
 
-    main(flow_mon, flow_txt)
+        # modo corresponde ao algoritmo que será executado
+        modo = str(input('Indique o algoritmo (Opcões: SA ou HDSO): '))
 
+        if modo.strip().upper() == 'SA':
+            break
+        elif modo.strip().upper() == 'HDSO':
+            break
+        else:
+            print('\nALGORITMO INCORRETO! TENTE NOVAMENTE.\n')
+
+    # Obtém as informações das 24 horas do algoritmo escolhido
+    # A sáida para cada hora será um arquivo txt com as métricas de cada usuário e a média das métricas para essa hora 
     for i in range(1, 25):
 
-        flow_mon = f'switch_SA_flowmon/switch_SA{i}.flowmon'
-        flow_txt = f'flows_SA/flow_SA{i}.txt'
+        if modo.strip().upper() == 'SA': 
+            flow_mon = f'switch_SA_flowmon/switch_SA{i}.flowmon'
+            flow_txt = f'flows_SA/flow_SA{i}.txt'
 
-        # flow_mon = f'switch_HDSO_flowmon/switch_HDSO{i}.flowmon'
-        # flow_txt = f'flows_HDSO/flow_HDSO{i}.txt'
+        if modo.strip().upper() == 'HDSO':
+            flow_mon = f'switch_HDSO_flowmon/switch_HDSO{i}.flowmon'
+            flow_txt = f'flows_HDSO/flow_HDSO{i}.txt'
 
         main(flow_mon, flow_txt)
 
-    caminho_resultados_dia = f'flows_SA/Resultados_dia.txt'
-    # caminho_resultados_dia = f'flows_HDSO/Resultados_dia.txt'
-    resultados_do_dia(caminho_resultados_dia, delay, jitter, pacotes_perdidos, usuarios_nao_atendidos)          
+
+    # Define o caminho do txt que será gerado de acordo com o algoritmo escolhido
+    # O txt contém a média das métricas para o dia inteiro(24 horas)
+    if modo.strip().upper() == 'SA':
+        caminho_resultados_dia = f'flows_SA/Resultados_dia.txt'
+    if modo.strip().upper() == 'HDSO':    
+        caminho_resultados_dia = f'flows_HDSO/Resultados_dia.txt'
+
+    # Gera um arquivo txt com a média para o dia
+    resultados_do_dia(caminho_resultados_dia, delay, jitter, pacotes_perdidos, usuarios_nao_atendidos)     

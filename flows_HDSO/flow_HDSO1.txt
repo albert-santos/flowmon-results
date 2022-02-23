@@ -98,550 +98,550 @@ FlowID: 16 (TCP 10.100.0.1/6653 --> 10.100.0.9/49153)
 	Packet Loss Ratio: 0.00 %
 FlowID: 17 (UDP 7.0.0.2/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 29.57 kbit/s
-	Mean Delay: 537.51 ms
-	Mean Jitter: 46.67 ms
-	Packet Loss Ratio: 67.06 %
+	RX bitrate: 168.77 kbit/s
+	Mean Delay: 29.17 ms
+	Mean Jitter: 11.13 ms
+	Packet Loss Ratio: 0.28 %
 FlowID: 18 (UDP 7.0.0.3/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 165.17 kbit/s
-	Mean Delay: 52.73 ms
-	Mean Jitter: 28.50 ms
-	Packet Loss Ratio: 0.85 %
+	RX bitrate: 17.51 kbit/s
+	Mean Delay: 2099.44 ms
+	Mean Jitter: 257.72 ms
+	Packet Loss Ratio: 80.52 %
 FlowID: 19 (UDP 7.0.0.4/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 38.57 kbit/s
-	Mean Delay: 248.75 ms
-	Mean Jitter: 42.68 ms
-	Packet Loss Ratio: 57.75 %
+	RX bitrate: 126.82 kbit/s
+	Mean Delay: 59.59 ms
+	Mean Jitter: 24.85 ms
+	Packet Loss Ratio: 14.47 %
 FlowID: 20 (UDP 7.0.0.5/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 42.14 kbit/s
-	Mean Delay: 275.23 ms
-	Mean Jitter: 50.95 ms
-	Packet Loss Ratio: 56.06 %
+	RX bitrate: 168.81 kbit/s
+	Mean Delay: 22.29 ms
+	Mean Jitter: 8.08 ms
+	Packet Loss Ratio: 0.00 %
 FlowID: 21 (UDP 7.0.0.6/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 112.95 kbit/s
-	Mean Delay: 85.85 ms
-	Mean Jitter: 41.41 ms
-	Packet Loss Ratio: 17.81 %
+	RX bitrate: 18.84 kbit/s
+	Mean Delay: 151.16 ms
+	Mean Jitter: 37.11 ms
+	Packet Loss Ratio: 77.64 %
 FlowID: 22 (UDP 7.0.0.7/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 12.00 kbit/s
-	Mean Delay: 387.08 ms
-	Mean Jitter: 76.43 ms
-	Packet Loss Ratio: 84.42 %
+	RX bitrate: 60.96 kbit/s
+	Mean Delay: 458.56 ms
+	Mean Jitter: 123.07 ms
+	Packet Loss Ratio: 39.13 %
 FlowID: 23 (UDP 7.0.0.8/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 164.15 kbit/s
-	Mean Delay: 32.90 ms
-	Mean Jitter: 8.98 ms
-	Packet Loss Ratio: 1.96 %
+	RX bitrate: 115.45 kbit/s
+	Mean Delay: 96.15 ms
+	Mean Jitter: 41.59 ms
+	Packet Loss Ratio: 13.38 %
 FlowID: 24 (UDP 7.0.0.9/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 145.67 kbit/s
-	Mean Delay: 77.46 ms
-	Mean Jitter: 32.15 ms
-	Packet Loss Ratio: 6.34 %
+	RX bitrate: 157.63 kbit/s
+	Mean Delay: 57.70 ms
+	Mean Jitter: 26.14 ms
+	Packet Loss Ratio: 2.89 %
 FlowID: 25 (UDP 7.0.0.10/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 150.60 kbit/s
-	Mean Delay: 64.12 ms
-	Mean Jitter: 28.36 ms
-	Packet Loss Ratio: 4.75 %
+	RX bitrate: 28.70 kbit/s
+	Mean Delay: 690.52 ms
+	Mean Jitter: 97.61 ms
+	Packet Loss Ratio: 67.65 %
 FlowID: 26 (UDP 7.0.0.11/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 50.98 kbit/s
-	Mean Delay: 587.68 ms
-	Mean Jitter: 89.57 ms
-	Packet Loss Ratio: 45.13 %
+	RX bitrate: 158.32 kbit/s
+	Mean Delay: 52.28 ms
+	Mean Jitter: 17.99 ms
+	Packet Loss Ratio: 3.74 %
 FlowID: 27 (UDP 7.0.0.12/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 104.15 kbit/s
-	Mean Delay: 110.12 ms
-	Mean Jitter: 41.02 ms
-	Packet Loss Ratio: 20.94 %
+	RX bitrate: None
+	Mean Delay: None
+	Mean Jitter: None
+	Packet Loss Ratio: None
 FlowID: 28 (UDP 7.0.0.13/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 168.75 kbit/s
-	Mean Delay: 24.68 ms
-	Mean Jitter: 7.34 ms
-	Packet Loss Ratio: 0.28 %
+	RX bitrate: 146.63 kbit/s
+	Mean Delay: 54.48 ms
+	Mean Jitter: 27.07 ms
+	Packet Loss Ratio: 6.02 %
 FlowID: 29 (UDP 7.0.0.14/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 37.38 kbit/s
-	Mean Delay: 190.76 ms
-	Mean Jitter: 48.09 ms
-	Packet Loss Ratio: 57.22 %
+	RX bitrate: 168.84 kbit/s
+	Mean Delay: 21.16 ms
+	Mean Jitter: 5.31 ms
+	Packet Loss Ratio: 0.28 %
 FlowID: 30 (UDP 7.0.0.15/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 168.83 kbit/s
-	Mean Delay: 34.07 ms
-	Mean Jitter: 21.37 ms
-	Packet Loss Ratio: 0.00 %
+	RX bitrate: 165.04 kbit/s
+	Mean Delay: 35.94 ms
+	Mean Jitter: 18.14 ms
+	Packet Loss Ratio: 0.85 %
 FlowID: 31 (UDP 7.0.0.16/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 47.79 kbit/s
-	Mean Delay: 171.29 ms
-	Mean Jitter: 45.98 ms
-	Packet Loss Ratio: 51.81 %
+	RX bitrate: 167.43 kbit/s
+	Mean Delay: 24.94 ms
+	Mean Jitter: 6.96 ms
+	Packet Loss Ratio: 0.56 %
 FlowID: 32 (UDP 7.0.0.17/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 93.55 kbit/s
-	Mean Delay: 133.43 ms
-	Mean Jitter: 46.79 ms
-	Packet Loss Ratio: 25.75 %
+	RX bitrate: None
+	Mean Delay: None
+	Mean Jitter: None
+	Packet Loss Ratio: None
 FlowID: 33 (UDP 7.0.0.18/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: None
-	Mean Delay: None
-	Mean Jitter: None
-	Packet Loss Ratio: None
+	RX bitrate: 133.89 kbit/s
+	Mean Delay: 318.96 ms
+	Mean Jitter: 65.10 ms
+	Packet Loss Ratio: 6.98 %
 FlowID: 34 (UDP 7.0.0.19/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 143.98 kbit/s
-	Mean Delay: 78.25 ms
-	Mean Jitter: 30.78 ms
-	Packet Loss Ratio: 6.99 %
+	RX bitrate: 161.38 kbit/s
+	Mean Delay: 56.69 ms
+	Mean Jitter: 27.50 ms
+	Packet Loss Ratio: 2.27 %
 FlowID: 35 (UDP 7.0.0.20/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 71.05 kbit/s
-	Mean Delay: 158.01 ms
-	Mean Jitter: 50.98 ms
-	Packet Loss Ratio: 34.93 %
+	RX bitrate: None
+	Mean Delay: None
+	Mean Jitter: None
+	Packet Loss Ratio: None
 FlowID: 36 (UDP 7.0.0.21/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 168.80 kbit/s
-	Mean Delay: 36.47 ms
-	Mean Jitter: 12.49 ms
-	Packet Loss Ratio: 0.00 %
+	RX bitrate: None
+	Mean Delay: None
+	Mean Jitter: None
+	Packet Loss Ratio: None
 FlowID: 37 (UDP 7.0.0.22/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 36.62 kbit/s
-	Mean Delay: 279.38 ms
-	Mean Jitter: 55.06 ms
-	Packet Loss Ratio: 59.24 %
+	RX bitrate: 120.95 kbit/s
+	Mean Delay: 60.34 ms
+	Mean Jitter: 28.28 ms
+	Packet Loss Ratio: 13.71 %
 FlowID: 38 (UDP 7.0.0.23/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 161.88 kbit/s
-	Mean Delay: 49.93 ms
-	Mean Jitter: 25.38 ms
-	Packet Loss Ratio: 1.71 %
+	RX bitrate: 89.32 kbit/s
+	Mean Delay: 118.48 ms
+	Mean Jitter: 46.57 ms
+	Packet Loss Ratio: 25.81 %
 FlowID: 39 (UDP 7.0.0.24/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: None
-	Mean Delay: None
-	Mean Jitter: None
-	Packet Loss Ratio: None
+	RX bitrate: 130.34 kbit/s
+	Mean Delay: 57.57 ms
+	Mean Jitter: 26.55 ms
+	Packet Loss Ratio: 12.14 %
 FlowID: 40 (UDP 7.0.0.25/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 144.27 kbit/s
-	Mean Delay: 67.52 ms
-	Mean Jitter: 30.66 ms
-	Packet Loss Ratio: 5.88 %
+	RX bitrate: 93.84 kbit/s
+	Mean Delay: 90.06 ms
+	Mean Jitter: 37.58 ms
+	Packet Loss Ratio: 23.64 %
 FlowID: 41 (UDP 7.0.0.26/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: None
-	Mean Delay: 809.24 ms
-	Mean Jitter: None
-	Packet Loss Ratio: 99.29 %
+	RX bitrate: 84.90 kbit/s
+	Mean Delay: 312.75 ms
+	Mean Jitter: 64.55 ms
+	Packet Loss Ratio: 27.24 %
 FlowID: 42 (UDP 7.0.0.27/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 150.87 kbit/s
-	Mean Delay: 66.99 ms
-	Mean Jitter: 29.09 ms
-	Packet Loss Ratio: 4.18 %
+	RX bitrate: 61.98 kbit/s
+	Mean Delay: 603.16 ms
+	Mean Jitter: 113.88 ms
+	Packet Loss Ratio: 39.35 %
 FlowID: 43 (UDP 7.0.0.28/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: None
-	Mean Delay: None
-	Mean Jitter: None
-	Packet Loss Ratio: None
+	RX bitrate: 153.33 kbit/s
+	Mean Delay: 56.61 ms
+	Mean Jitter: 21.32 ms
+	Packet Loss Ratio: 4.12 %
 FlowID: 44 (UDP 7.0.0.29/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 96.47 kbit/s
-	Mean Delay: 96.09 ms
-	Mean Jitter: 41.57 ms
-	Packet Loss Ratio: 24.44 %
+	RX bitrate: 26.21 kbit/s
+	Mean Delay: 1204.30 ms
+	Mean Jitter: 139.58 ms
+	Packet Loss Ratio: 67.86 %
 FlowID: 45 (UDP 7.0.0.30/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 26.68 kbit/s
-	Mean Delay: 538.08 ms
-	Mean Jitter: 55.92 ms
-	Packet Loss Ratio: 68.93 %
+	RX bitrate: 134.35 kbit/s
+	Mean Delay: 53.83 ms
+	Mean Jitter: 24.28 ms
+	Packet Loss Ratio: 8.95 %
 FlowID: 46 (UDP 7.0.0.31/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 65.08 kbit/s
-	Mean Delay: 367.02 ms
-	Mean Jitter: 79.67 ms
-	Packet Loss Ratio: 38.67 %
+	RX bitrate: 146.08 kbit/s
+	Mean Delay: 164.63 ms
+	Mean Jitter: 54.68 ms
+	Packet Loss Ratio: 4.89 %
 FlowID: 47 (UDP 7.0.0.32/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 30.59 kbit/s
-	Mean Delay: 138.06 ms
-	Mean Jitter: 46.70 ms
-	Packet Loss Ratio: 65.34 %
+	RX bitrate: None
+	Mean Delay: None
+	Mean Jitter: None
+	Packet Loss Ratio: None
 FlowID: 48 (UDP 7.0.0.33/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 168.83 kbit/s
-	Mean Delay: 35.35 ms
-	Mean Jitter: 21.87 ms
-	Packet Loss Ratio: 0.00 %
+	RX bitrate: 147.25 kbit/s
+	Mean Delay: 55.26 ms
+	Mean Jitter: 28.03 ms
+	Packet Loss Ratio: 4.57 %
 FlowID: 49 (UDP 7.0.0.34/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 149.77 kbit/s
-	Mean Delay: 47.02 ms
-	Mean Jitter: 22.23 ms
-	Packet Loss Ratio: 5.34 %
+	RX bitrate: 165.00 kbit/s
+	Mean Delay: 38.71 ms
+	Mean Jitter: 20.44 ms
+	Packet Loss Ratio: 0.28 %
 FlowID: 50 (UDP 7.0.0.35/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 147.38 kbit/s
-	Mean Delay: 66.78 ms
-	Mean Jitter: 28.46 ms
-	Packet Loss Ratio: 6.27 %
+	RX bitrate: 35.57 kbit/s
+	Mean Delay: 624.62 ms
+	Mean Jitter: 77.07 ms
+	Packet Loss Ratio: 60.11 %
 FlowID: 51 (UDP 7.0.0.36/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: None
-	Mean Delay: None
-	Mean Jitter: None
-	Packet Loss Ratio: None
+	RX bitrate: 97.86 kbit/s
+	Mean Delay: 91.53 ms
+	Mean Jitter: 41.82 ms
+	Packet Loss Ratio: 20.77 %
 FlowID: 52 (UDP 7.0.0.37/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 168.32 kbit/s
-	Mean Delay: 31.05 ms
-	Mean Jitter: 7.08 ms
-	Packet Loss Ratio: 0.00 %
+	RX bitrate: 119.22 kbit/s
+	Mean Delay: 250.38 ms
+	Mean Jitter: 65.78 ms
+	Packet Loss Ratio: 12.46 %
 FlowID: 53 (UDP 7.0.0.38/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 84.86 kbit/s
-	Mean Delay: 141.68 ms
-	Mean Jitter: 48.92 ms
-	Packet Loss Ratio: 28.51 %
+	RX bitrate: 154.71 kbit/s
+	Mean Delay: 84.39 ms
+	Mean Jitter: 36.35 ms
+	Packet Loss Ratio: 3.23 %
 FlowID: 54 (UDP 7.0.0.39/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 104.13 kbit/s
-	Mean Delay: 94.04 ms
-	Mean Jitter: 41.89 ms
-	Packet Loss Ratio: 19.41 %
+	RX bitrate: 155.73 kbit/s
+	Mean Delay: 59.60 ms
+	Mean Jitter: 28.83 ms
+	Packet Loss Ratio: 3.49 %
 FlowID: 55 (UDP 7.0.0.40/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: None
-	Mean Delay: None
-	Mean Jitter: None
-	Packet Loss Ratio: None
+	RX bitrate: 31.00 kbit/s
+	Mean Delay: 943.80 ms
+	Mean Jitter: 102.88 ms
+	Packet Loss Ratio: 64.74 %
 FlowID: 56 (UDP 7.0.0.41/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 25.80 kbit/s
-	Mean Delay: 1215.98 ms
-	Mean Jitter: 224.12 ms
-	Packet Loss Ratio: 68.26 %
+	RX bitrate: 130.06 kbit/s
+	Mean Delay: 356.00 ms
+	Mean Jitter: 66.37 ms
+	Packet Loss Ratio: 10.78 %
 FlowID: 57 (UDP 7.0.0.42/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 160.96 kbit/s
-	Mean Delay: 45.75 ms
-	Mean Jitter: 18.04 ms
-	Packet Loss Ratio: 2.28 %
+	RX bitrate: 68.14 kbit/s
+	Mean Delay: 745.68 ms
+	Mean Jitter: 153.30 ms
+	Packet Loss Ratio: 30.77 %
 FlowID: 58 (UDP 7.0.0.43/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 149.51 kbit/s
-	Mean Delay: 40.85 ms
-	Mean Jitter: 16.12 ms
-	Packet Loss Ratio: 7.04 %
+	RX bitrate: 46.68 kbit/s
+	Mean Delay: 120.77 ms
+	Mean Jitter: 45.56 ms
+	Packet Loss Ratio: 50.26 %
 FlowID: 59 (UDP 7.0.0.44/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 38.74 kbit/s
-	Mean Delay: 237.91 ms
-	Mean Jitter: 46.26 ms
-	Packet Loss Ratio: 56.91 %
+	RX bitrate: 152.86 kbit/s
+	Mean Delay: 56.99 ms
+	Mean Jitter: 23.70 ms
+	Packet Loss Ratio: 4.96 %
 FlowID: 60 (UDP 7.0.0.45/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 23.13 kbit/s
-	Mean Delay: 1626.03 ms
-	Mean Jitter: 89.26 ms
-	Packet Loss Ratio: 74.40 %
+	RX bitrate: 153.87 kbit/s
+	Mean Delay: 54.81 ms
+	Mean Jitter: 21.44 ms
+	Packet Loss Ratio: 4.65 %
 FlowID: 61 (UDP 7.0.0.46/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 159.37 kbit/s
-	Mean Delay: 43.85 ms
-	Mean Jitter: 25.74 ms
-	Packet Loss Ratio: 3.41 %
+	RX bitrate: 70.26 kbit/s
+	Mean Delay: 738.45 ms
+	Mean Jitter: 170.70 ms
+	Packet Loss Ratio: 35.87 %
 FlowID: 62 (UDP 7.0.0.47/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 25.42 kbit/s
-	Mean Delay: 1129.17 ms
-	Mean Jitter: 215.94 ms
-	Packet Loss Ratio: 69.59 %
+	RX bitrate: None
+	Mean Delay: None
+	Mean Jitter: None
+	Packet Loss Ratio: None
 FlowID: 63 (UDP 7.0.0.48/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: None
-	Mean Delay: None
-	Mean Jitter: None
-	Packet Loss Ratio: None
+	RX bitrate: 56.28 kbit/s
+	Mean Delay: 525.54 ms
+	Mean Jitter: 132.18 ms
+	Packet Loss Ratio: 43.69 %
 FlowID: 64 (UDP 7.0.0.49/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 38.86 kbit/s
-	Mean Delay: 251.33 ms
-	Mean Jitter: 39.89 ms
-	Packet Loss Ratio: 57.30 %
+	RX bitrate: 63.54 kbit/s
+	Mean Delay: 486.27 ms
+	Mean Jitter: 121.05 ms
+	Packet Loss Ratio: 39.45 %
 FlowID: 65 (UDP 7.0.0.50/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 33.46 kbit/s
-	Mean Delay: 306.86 ms
-	Mean Jitter: 46.19 ms
-	Packet Loss Ratio: 62.64 %
+	RX bitrate: 168.80 kbit/s
+	Mean Delay: 28.78 ms
+	Mean Jitter: 12.76 ms
+	Packet Loss Ratio: 0.00 %
 FlowID: 66 (UDP 7.0.0.51/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 33.88 kbit/s
-	Mean Delay: 250.19 ms
-	Mean Jitter: 45.36 ms
-	Packet Loss Ratio: 61.75 %
+	RX bitrate: 168.81 kbit/s
+	Mean Delay: 31.33 ms
+	Mean Jitter: 19.08 ms
+	Packet Loss Ratio: 0.00 %
 FlowID: 67 (UDP 7.0.0.52/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 35.31 kbit/s
-	Mean Delay: 360.99 ms
-	Mean Jitter: 46.33 ms
-	Packet Loss Ratio: 61.11 %
+	RX bitrate: 77.74 kbit/s
+	Mean Delay: 232.25 ms
+	Mean Jitter: 64.72 ms
+	Packet Loss Ratio: 31.80 %
 FlowID: 68 (UDP 7.0.0.53/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 168.77 kbit/s
-	Mean Delay: 28.43 ms
-	Mean Jitter: 14.44 ms
-	Packet Loss Ratio: 0.28 %
+	RX bitrate: 153.37 kbit/s
+	Mean Delay: 47.31 ms
+	Mean Jitter: 22.95 ms
+	Packet Loss Ratio: 4.39 %
 FlowID: 69 (UDP 7.0.0.54/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 88.10 kbit/s
-	Mean Delay: 121.25 ms
-	Mean Jitter: 46.61 ms
-	Packet Loss Ratio: 27.56 %
+	RX bitrate: 160.88 kbit/s
+	Mean Delay: 74.44 ms
+	Mean Jitter: 37.07 ms
+	Packet Loss Ratio: 2.85 %
 FlowID: 70 (UDP 7.0.0.55/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 144.02 kbit/s
-	Mean Delay: 67.74 ms
-	Mean Jitter: 31.23 ms
-	Packet Loss Ratio: 7.53 %
+	RX bitrate: 29.40 kbit/s
+	Mean Delay: 1001.10 ms
+	Mean Jitter: 127.28 ms
+	Packet Loss Ratio: 66.48 %
 FlowID: 71 (UDP 7.0.0.56/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 151.84 kbit/s
-	Mean Delay: 69.95 ms
-	Mean Jitter: 31.69 ms
-	Packet Loss Ratio: 4.45 %
+	RX bitrate: 148.18 kbit/s
+	Mean Delay: 56.09 ms
+	Mean Jitter: 21.96 ms
+	Packet Loss Ratio: 5.95 %
 FlowID: 72 (UDP 7.0.0.57/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 168.45 kbit/s
-	Mean Delay: 36.09 ms
-	Mean Jitter: 11.95 ms
-	Packet Loss Ratio: 0.00 %
+	RX bitrate: 152.54 kbit/s
+	Mean Delay: 57.68 ms
+	Mean Jitter: 23.72 ms
+	Packet Loss Ratio: 4.50 %
 FlowID: 73 (UDP 7.0.0.58/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 42.29 kbit/s
-	Mean Delay: 210.00 ms
-	Mean Jitter: 46.27 ms
-	Packet Loss Ratio: 55.03 %
+	RX bitrate: 134.33 kbit/s
+	Mean Delay: 53.30 ms
+	Mean Jitter: 24.24 ms
+	Packet Loss Ratio: 11.21 %
 FlowID: 74 (UDP 7.0.0.59/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 168.36 kbit/s
-	Mean Delay: 30.25 ms
-	Mean Jitter: 14.24 ms
-	Packet Loss Ratio: 0.00 %
+	RX bitrate: 153.43 kbit/s
+	Mean Delay: 40.01 ms
+	Mean Jitter: 22.66 ms
+	Packet Loss Ratio: 3.27 %
 FlowID: 75 (UDP 7.0.0.60/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 144.50 kbit/s
-	Mean Delay: 74.04 ms
-	Mean Jitter: 30.89 ms
-	Packet Loss Ratio: 6.69 %
+	RX bitrate: 150.87 kbit/s
+	Mean Delay: 60.14 ms
+	Mean Jitter: 27.32 ms
+	Packet Loss Ratio: 3.32 %
 FlowID: 76 (UDP 7.0.0.61/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 137.34 kbit/s
-	Mean Delay: 50.30 ms
-	Mean Jitter: 24.09 ms
-	Packet Loss Ratio: 10.00 %
+	RX bitrate: 163.99 kbit/s
+	Mean Delay: 43.21 ms
+	Mean Jitter: 25.03 ms
+	Packet Loss Ratio: 1.13 %
 FlowID: 77 (UDP 7.0.0.62/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 41.87 kbit/s
-	Mean Delay: 182.38 ms
-	Mean Jitter: 51.00 ms
-	Packet Loss Ratio: 54.87 %
+	RX bitrate: 134.03 kbit/s
+	Mean Delay: 54.96 ms
+	Mean Jitter: 25.51 ms
+	Packet Loss Ratio: 9.21 %
 FlowID: 78 (UDP 7.0.0.63/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 44.57 kbit/s
-	Mean Delay: 283.43 ms
-	Mean Jitter: 55.33 ms
-	Packet Loss Ratio: 52.04 %
+	RX bitrate: 76.36 kbit/s
+	Mean Delay: 424.28 ms
+	Mean Jitter: 95.80 ms
+	Packet Loss Ratio: 31.17 %
 FlowID: 79 (UDP 7.0.0.64/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 26.42 kbit/s
-	Mean Delay: 475.96 ms
-	Mean Jitter: 59.45 ms
-	Packet Loss Ratio: 67.66 %
+	RX bitrate: 168.84 kbit/s
+	Mean Delay: 28.27 ms
+	Mean Jitter: 12.74 ms
+	Packet Loss Ratio: 0.00 %
 FlowID: 80 (UDP 7.0.0.65/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: None
-	Mean Delay: None
-	Mean Jitter: None
-	Packet Loss Ratio: None
+	RX bitrate: 150.77 kbit/s
+	Mean Delay: 55.82 ms
+	Mean Jitter: 21.93 ms
+	Packet Loss Ratio: 5.03 %
 FlowID: 81 (UDP 7.0.0.66/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 159.55 kbit/s
-	Mean Delay: 45.87 ms
-	Mean Jitter: 18.61 ms
-	Packet Loss Ratio: 3.13 %
+	RX bitrate: 156.66 kbit/s
+	Mean Delay: 47.17 ms
+	Mean Jitter: 23.86 ms
+	Packet Loss Ratio: 3.75 %
 FlowID: 82 (UDP 7.0.0.67/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 39.96 kbit/s
-	Mean Delay: 190.79 ms
-	Mean Jitter: 49.05 ms
-	Packet Loss Ratio: 56.45 %
+	RX bitrate: 156.26 kbit/s
+	Mean Delay: 51.53 ms
+	Mean Jitter: 20.72 ms
+	Packet Loss Ratio: 3.20 %
 FlowID: 83 (UDP 7.0.0.68/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 106.04 kbit/s
-	Mean Delay: 103.90 ms
-	Mean Jitter: 41.59 ms
-	Packet Loss Ratio: 18.01 %
+	RX bitrate: 168.85 kbit/s
+	Mean Delay: 32.03 ms
+	Mean Jitter: 16.14 ms
+	Packet Loss Ratio: 0.00 %
 FlowID: 84 (UDP 7.0.0.69/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 157.38 kbit/s
-	Mean Delay: 38.89 ms
-	Mean Jitter: 17.70 ms
-	Packet Loss Ratio: 2.92 %
+	RX bitrate: 21.10 kbit/s
+	Mean Delay: 162.12 ms
+	Mean Jitter: 45.65 ms
+	Packet Loss Ratio: 75.93 %
 FlowID: 85 (UDP 7.0.0.70/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 27.72 kbit/s
-	Mean Delay: 514.44 ms
-	Mean Jitter: 52.78 ms
-	Packet Loss Ratio: 67.44 %
+	RX bitrate: 168.74 kbit/s
+	Mean Delay: 21.89 ms
+	Mean Jitter: 6.55 ms
+	Packet Loss Ratio: 0.28 %
 FlowID: 86 (UDP 7.0.0.71/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 116.74 kbit/s
-	Mean Delay: 90.62 ms
-	Mean Jitter: 34.48 ms
-	Packet Loss Ratio: 15.36 %
+	RX bitrate: 157.62 kbit/s
+	Mean Delay: 49.32 ms
+	Mean Jitter: 25.06 ms
+	Packet Loss Ratio: 3.72 %
 FlowID: 87 (UDP 7.0.0.72/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 161.38 kbit/s
-	Mean Delay: 39.35 ms
-	Mean Jitter: 13.50 ms
-	Packet Loss Ratio: 2.27 %
+	RX bitrate: 138.29 kbit/s
+	Mean Delay: 54.68 ms
+	Mean Jitter: 29.74 ms
+	Packet Loss Ratio: 8.81 %
 FlowID: 88 (UDP 7.0.0.73/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 50.18 kbit/s
-	Mean Delay: 174.44 ms
-	Mean Jitter: 47.70 ms
-	Packet Loss Ratio: 50.50 %
+	RX bitrate: 168.79 kbit/s
+	Mean Delay: 17.29 ms
+	Mean Jitter: 2.97 ms
+	Packet Loss Ratio: 0.28 %
 FlowID: 89 (UDP 7.0.0.74/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 90.87 kbit/s
-	Mean Delay: 123.49 ms
-	Mean Jitter: 43.68 ms
-	Packet Loss Ratio: 24.61 %
+	RX bitrate: 52.65 kbit/s
+	Mean Delay: 110.70 ms
+	Mean Jitter: 47.25 ms
+	Packet Loss Ratio: 49.30 %
 FlowID: 90 (UDP 7.0.0.75/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 145.57 kbit/s
-	Mean Delay: 44.31 ms
-	Mean Jitter: 19.76 ms
-	Packet Loss Ratio: 4.63 %
+	RX bitrate: 100.78 kbit/s
+	Mean Delay: 101.85 ms
+	Mean Jitter: 48.49 ms
+	Packet Loss Ratio: 19.70 %
 FlowID: 91 (UDP 7.0.0.76/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 168.33 kbit/s
-	Mean Delay: 31.04 ms
-	Mean Jitter: 6.96 ms
-	Packet Loss Ratio: 0.00 %
+	RX bitrate: 31.80 kbit/s
+	Mean Delay: 848.24 ms
+	Mean Jitter: 85.74 ms
+	Packet Loss Ratio: 61.85 %
 FlowID: 92 (UDP 7.0.0.77/49153 --> 1.0.0.2/900)
-	TX bitrate: 168.79 kbit/s
-	RX bitrate: 149.75 kbit/s
-	Mean Delay: 68.84 ms
-	Mean Jitter: 30.45 ms
-	Packet Loss Ratio: 5.64 %
-FlowID: 93 (UDP 7.0.0.78/49153 --> 1.0.0.2/900)
-	TX bitrate: 168.79 kbit/s
-	RX bitrate: 46.45 kbit/s
-	Mean Delay: 191.67 ms
-	Mean Jitter: 44.34 ms
-	Packet Loss Ratio: 51.55 %
-FlowID: 94 (UDP 7.0.0.79/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
 	RX bitrate: None
 	Mean Delay: None
 	Mean Jitter: None
 	Packet Loss Ratio: None
+FlowID: 93 (UDP 7.0.0.78/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.79 kbit/s
+	RX bitrate: 128.43 kbit/s
+	Mean Delay: 57.11 ms
+	Mean Jitter: 25.57 ms
+	Packet Loss Ratio: 12.46 %
+FlowID: 94 (UDP 7.0.0.79/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.79 kbit/s
+	RX bitrate: 71.67 kbit/s
+	Mean Delay: 419.75 ms
+	Mean Jitter: 92.13 ms
+	Packet Loss Ratio: 34.80 %
 FlowID: 95 (UDP 7.0.0.80/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 164.11 kbit/s
-	Mean Delay: 40.21 ms
-	Mean Jitter: 16.90 ms
-	Packet Loss Ratio: 1.13 %
+	RX bitrate: 125.07 kbit/s
+	Mean Delay: 222.88 ms
+	Mean Jitter: 59.77 ms
+	Packet Loss Ratio: 15.56 %
 FlowID: 96 (UDP 7.0.0.81/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 5.76 kbit/s
-	Mean Delay: 1038.99 ms
-	Mean Jitter: 49.67 ms
-	Packet Loss Ratio: 97.22 %
+	RX bitrate: 168.92 kbit/s
+	Mean Delay: 23.76 ms
+	Mean Jitter: 5.45 ms
+	Packet Loss Ratio: 0.00 %
 FlowID: 97 (UDP 7.0.0.82/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 139.82 kbit/s
-	Mean Delay: 74.79 ms
-	Mean Jitter: 33.22 ms
-	Packet Loss Ratio: 9.42 %
+	RX bitrate: 164.63 kbit/s
+	Mean Delay: 40.83 ms
+	Mean Jitter: 13.66 ms
+	Packet Loss Ratio: 0.85 %
 FlowID: 98 (UDP 7.0.0.83/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 39.16 kbit/s
-	Mean Delay: 242.79 ms
-	Mean Jitter: 49.81 ms
-	Packet Loss Ratio: 57.37 %
+	RX bitrate: 148.74 kbit/s
+	Mean Delay: 250.30 ms
+	Mean Jitter: 69.85 ms
+	Packet Loss Ratio: 6.51 %
 FlowID: 99 (UDP 7.0.0.84/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 148.67 kbit/s
-	Mean Delay: 72.30 ms
-	Mean Jitter: 29.53 ms
-	Packet Loss Ratio: 6.51 %
+	RX bitrate: 140.39 kbit/s
+	Mean Delay: 65.73 ms
+	Mean Jitter: 31.81 ms
+	Packet Loss Ratio: 6.85 %
 FlowID: 100 (UDP 7.0.0.85/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 42.56 kbit/s
-	Mean Delay: 205.44 ms
-	Mean Jitter: 44.30 ms
-	Packet Loss Ratio: 53.97 %
+	RX bitrate: 168.80 kbit/s
+	Mean Delay: 26.72 ms
+	Mean Jitter: 11.49 ms
+	Packet Loss Ratio: 0.00 %
 FlowID: 101 (UDP 7.0.0.86/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 23.86 kbit/s
-	Mean Delay: 130.18 ms
-	Mean Jitter: 53.76 ms
-	Packet Loss Ratio: 71.76 %
+	RX bitrate: 109.22 kbit/s
+	Mean Delay: 78.87 ms
+	Mean Jitter: 35.50 ms
+	Packet Loss Ratio: 18.37 %
 FlowID: 102 (UDP 7.0.0.87/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 115.62 kbit/s
-	Mean Delay: 77.52 ms
-	Mean Jitter: 38.47 ms
-	Packet Loss Ratio: 17.73 %
+	RX bitrate: 99.82 kbit/s
+	Mean Delay: 340.73 ms
+	Mean Jitter: 87.94 ms
+	Packet Loss Ratio: 16.93 %
 FlowID: 103 (UDP 7.0.0.88/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 162.70 kbit/s
-	Mean Delay: 41.88 ms
-	Mean Jitter: 15.51 ms
-	Packet Loss Ratio: 1.14 %
+	RX bitrate: None
+	Mean Delay: None
+	Mean Jitter: None
+	Packet Loss Ratio: None
 FlowID: 104 (UDP 7.0.0.89/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 166.91 kbit/s
-	Mean Delay: 50.60 ms
-	Mean Jitter: 25.21 ms
-	Packet Loss Ratio: 0.56 %
+	RX bitrate: 126.72 kbit/s
+	Mean Delay: 196.13 ms
+	Mean Jitter: 58.53 ms
+	Packet Loss Ratio: 11.80 %
 FlowID: 105 (UDP 7.0.0.90/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 161.33 kbit/s
-	Mean Delay: 36.80 ms
-	Mean Jitter: 17.97 ms
-	Packet Loss Ratio: 1.99 %
+	RX bitrate: 87.54 kbit/s
+	Mean Delay: 122.68 ms
+	Mean Jitter: 48.38 ms
+	Packet Loss Ratio: 27.27 %
 FlowID: 106 (UDP 7.0.0.91/49153 --> 1.0.0.2/900)
 	TX bitrate: 168.79 kbit/s
-	RX bitrate: 166.49 kbit/s
-	Mean Delay: 31.09 ms
-	Mean Jitter: 6.84 ms
-	Packet Loss Ratio: 0.84 %
+	RX bitrate: 8.72 kbit/s
+	Mean Delay: 167.71 ms
+	Mean Jitter: 34.00 ms
+	Packet Loss Ratio: 88.67 %
 
 
     MÉTRICAS NO GERAL: 
 TX bitrate média: 168.79 kbit/s
-RX bitrate média: 91.77 kbit/s
-Delay Médio: 188.37 ms
-Jitter Médio: 36.86 ms
-Média da taxa de pacotes perdidos: 26.67%
-Usuários não atendidos: 9
+RX bitrate média: 107.97 kbit/s
+Delay Médio: 199.81 ms
+Jitter Médio: 44.44 ms
+Média da taxa de pacotes perdidos: 17.57%
+Usuários não atendidos: 8
