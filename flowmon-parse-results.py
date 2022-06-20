@@ -236,6 +236,7 @@ def main(flow_mon, flow_txt):
     packet_loss_ratio = 0
     numero_flows = 0
     contador_usuarios_nao_atendidos = 0
+    contador_tcp = 0
 
 
     for sim in sim_list:
@@ -260,6 +261,9 @@ def main(flow_mon, flow_txt):
 
                 if proto == 'UDP':
                     tx_bitrate += (flow.txBitrate*1e-3)
+
+                if proto == 'TCP':
+                    contador_tcp += 1
 
 
             if flow.rxBitrate is None:
@@ -319,7 +323,7 @@ def main(flow_mon, flow_txt):
             
             numero_flows += 1
 
-    numero_usuarios = numero_flows - 16 # Retirando comunicações TCP
+    numero_usuarios = numero_flows - contador_tcp # Retirando comunicações TCP
 
     tx_bitrate = tx_bitrate / numero_usuarios
     rx_bitrate = rx_bitrate / numero_usuarios
@@ -366,41 +370,51 @@ if __name__ == '__main__':
     pacotes_perdidos = []
     usuarios_nao_atendidos = []
 
-    # Laço que contém o input que pede para o usuário informar o algoritmo que será utilizado
-    # O laço é quebrado apenas quando o usuário informa um algoritmo correto
-    while(1):
+    # # Laço que contém o input que pede para o usuário informar o algoritmo que será utilizado
+    # # O laço é quebrado apenas quando o usuário informa um algoritmo correto
+    # while(1):
 
-        # modo corresponde ao algoritmo que será executado
-        modo = str(input('Indique o algoritmo (Opcões: SA ou HDSO): '))
+    #     # modo corresponde ao algoritmo que será executado
+    #     modo = str(input('Indique o algoritmo (Opcões: SA ou HDSO): '))
 
-        if modo.strip().upper() == 'SA':
-            break
-        elif modo.strip().upper() == 'HDSO':
-            break
-        else:
-            print('\nALGORITMO INCORRETO! TENTE NOVAMENTE.\n')
+    #     if modo.strip().upper() == 'SA':
+    #         break
+    #     elif modo.strip().upper() == 'HDSO':
+    #         break
+    #     else:
+    #         print('\nALGORITMO INCORRETO! TENTE NOVAMENTE.\n')
 
-    # Obtém as informações das 24 horas do algoritmo escolhido
-    # A sáida para cada hora será um arquivo txt com as métricas de cada usuário e a média das métricas para essa hora 
-    for i in range(1, 25):
+    # # Obtém as informações das 24 horas do algoritmo escolhido
+    # # A sáida para cada hora será um arquivo txt com as métricas de cada usuário e a média das métricas para essa hora 
+    # for i in range(1, 25):
 
-        if modo.strip().upper() == 'SA': 
-            flow_mon = f'switch_SA_flowmon/switch_SA{i}.flowmon'
-            flow_txt = f'flows_SA/flow_SA{i}.txt'
+    #     if modo.strip().upper() == 'SA': 
+    #         flow_mon = f'switch_SA_flowmon/switch_SA{i}.flowmon'
+    #         flow_txt = f'flows_SA/flow_SA{i}.txt'
 
-        if modo.strip().upper() == 'HDSO':
-            flow_mon = f'switch_HDSO_flowmon/switch_HDSO{i}.flowmon'
-            flow_txt = f'flows_HDSO/flow_HDSO{i}.txt'
+    #     if modo.strip().upper() == 'HDSO':
+    #         flow_mon = f'switch_HDSO_flowmon/switch_HDSO{i}.flowmon'
+    #         flow_txt = f'flows_HDSO/flow_HDSO{i}.txt'
 
-        main(flow_mon, flow_txt)
+    #     main(flow_mon, flow_txt)
+
+    # flow_mon = f'LTE-Friis.flowmon'
+    # flow_txt = f'LTE-Friis.txt'
+
+    flow_mon = f'LTE-Fabricio.flowmon'
+    flow_txt = f'LTE-Fabricio.txt'
+
+    main(flow_mon, flow_txt)
+
+    
 
 
-    # Define o caminho do txt que será gerado de acordo com o algoritmo escolhido
-    # O txt contém a média das métricas para o dia inteiro(24 horas)
-    if modo.strip().upper() == 'SA':
-        caminho_resultados_dia = f'flows_SA/Resultados_dia.txt'
-    if modo.strip().upper() == 'HDSO':    
-        caminho_resultados_dia = f'flows_HDSO/Resultados_dia.txt'
+    # # Define o caminho do txt que será gerado de acordo com o algoritmo escolhido
+    # # O txt contém a média das métricas para o dia inteiro(24 horas)
+    # if modo.strip().upper() == 'SA':
+    #     caminho_resultados_dia = f'flows_SA/Resultados_dia.txt'
+    # if modo.strip().upper() == 'HDSO':    
+    #     caminho_resultados_dia = f'flows_HDSO/Resultados_dia.txt'
 
-    # Gera um arquivo txt com a média para o dia
-    resultados_do_dia(caminho_resultados_dia, delay, jitter, pacotes_perdidos, usuarios_nao_atendidos)     
+    # # Gera um arquivo txt com a média para o dia
+    # resultados_do_dia(caminho_resultados_dia, delay, jitter, pacotes_perdidos, usuarios_nao_atendidos)     

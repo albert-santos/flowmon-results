@@ -1,0 +1,62 @@
+Reading XML file
+ done.
+FlowID: 1 (UDP 7.0.0.2/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.62 kbit/s
+	RX bitrate: 168.66 kbit/s
+	Mean Delay: 16.50 ms
+	Mean Jitter: 0.41 ms
+	Packet Loss Ratio: 0.00 %
+FlowID: 2 (UDP 7.0.0.3/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.62 kbit/s
+	RX bitrate: 168.62 kbit/s
+	Mean Delay: 16.49 ms
+	Mean Jitter: 0.40 ms
+	Packet Loss Ratio: 0.18 %
+FlowID: 3 (UDP 7.0.0.4/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.62 kbit/s
+	RX bitrate: 168.66 kbit/s
+	Mean Delay: 16.51 ms
+	Mean Jitter: 0.42 ms
+	Packet Loss Ratio: 0.00 %
+FlowID: 4 (UDP 7.0.0.5/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.62 kbit/s
+	RX bitrate: 168.62 kbit/s
+	Mean Delay: 16.50 ms
+	Mean Jitter: 0.41 ms
+	Packet Loss Ratio: 0.18 %
+FlowID: 5 (UDP 7.0.0.6/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.62 kbit/s
+	RX bitrate: 168.66 kbit/s
+	Mean Delay: 16.53 ms
+	Mean Jitter: 0.42 ms
+	Packet Loss Ratio: 0.00 %
+FlowID: 6 (UDP 7.0.0.7/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.62 kbit/s
+	RX bitrate: 168.62 kbit/s
+	Mean Delay: 16.52 ms
+	Mean Jitter: 0.41 ms
+	Packet Loss Ratio: 0.18 %
+FlowID: 7 (UDP 7.0.0.8/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.62 kbit/s
+	RX bitrate: 168.62 kbit/s
+	Mean Delay: 16.52 ms
+	Mean Jitter: 0.42 ms
+	Packet Loss Ratio: 0.18 %
+FlowID: 8 (UDP 7.0.0.9/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.62 kbit/s
+	RX bitrate: 168.63 kbit/s
+	Mean Delay: 16.53 ms
+	Mean Jitter: 0.42 ms
+	Packet Loss Ratio: 0.18 %
+FlowID: 9 (UDP 7.0.0.10/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.62 kbit/s
+	RX bitrate: 168.62 kbit/s
+	Mean Delay: 16.53 ms
+	Mean Jitter: 0.42 ms
+	Packet Loss Ratio: 0.18 %
+FlowID: 10 (UDP 7.0.0.11/49153 --> 1.0.0.2/900)
+	TX bitrate: 168.62 kbit/s
+	RX bitrate: 168.63 kbit/s
+	Mean Delay: 16.54 ms
+	Mean Jitter: 0.42 ms
+	Packet Loss Ratio: 0.18 %
