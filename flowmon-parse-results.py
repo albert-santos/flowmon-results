@@ -1,5 +1,5 @@
 from __future__ import division
-from resultados_do_dia import resultados_do_dia
+from resultado_geral import resultado_geral
 import sys
 import os
 try:
@@ -370,51 +370,53 @@ if __name__ == '__main__':
     pacotes_perdidos = []
     usuarios_nao_atendidos = []
 
-    # # Laço que contém o input que pede para o usuário informar o algoritmo que será utilizado
-    # # O laço é quebrado apenas quando o usuário informa um algoritmo correto
-    # while(1):
+    # Laço que contém o input que pede para o usuário informar o cenário que será utilizado
+    # O laço é quebrado apenas quando o usuário informa um cenário correto
+    while(1):
 
-    #     # modo corresponde ao algoritmo que será executado
-    #     modo = str(input('Indique o algoritmo (Opcões: SA ou HDSO): '))
+        # modo corresponde ao cenário que será executado
+        modo = str(input('Indique o cenário (Opcões: SA, HDSO, SUI e ECC): '))
+        quantidade_de_arquivos = int(input('Indique a quantidade de arquivos flowmon: '))
 
-    #     if modo.strip().upper() == 'SA':
-    #         break
-    #     elif modo.strip().upper() == 'HDSO':
-    #         break
-    #     else:
-    #         print('\nALGORITMO INCORRETO! TENTE NOVAMENTE.\n')
+        if modo.strip().upper() == 'SA':
+            break
+        elif modo.strip().upper() == 'HDSO':
+            break
+        else:
+            print('\nCENÁRIO INCORRETO! TENTE NOVAMENTE.\n')
 
-    # # Obtém as informações das 24 horas do algoritmo escolhido
-    # # A sáida para cada hora será um arquivo txt com as métricas de cada usuário e a média das métricas para essa hora 
-    # for i in range(1, 25):
+    # Obtém as informações da quantidade de arquivos do cenário escolhido
+    # A sáida para cada arquivo será um arquivo txt com as métricas de cada usuário e a média das métricas para esse arquivo
+    # Os arquivos flowmon são gerados pela simulação no NS-3
+    for i in range(1, quantidade_de_arquivos + 1):
 
-    #     if modo.strip().upper() == 'SA': 
-    #         flow_mon = f'switch_SA_flowmon/switch_SA{i}.flowmon'
-    #         flow_txt = f'flows_SA/flow_SA{i}.txt'
+        if modo.strip().upper() == 'SA': 
+            flow_mon = f'switch_SA_flowmon/switch_SA{i}.flowmon'
+            flow_txt = f'flows_SA/flow_SA{i}.txt'
 
-    #     if modo.strip().upper() == 'HDSO':
-    #         flow_mon = f'switch_HDSO_flowmon/switch_HDSO{i}.flowmon'
-    #         flow_txt = f'flows_HDSO/flow_HDSO{i}.txt'
+        elif modo.strip().upper() == 'HDSO':
+            flow_mon = f'switch_HDSO_flowmon/switch_HDSO{i}.flowmon'
+            flow_txt = f'flows_HDSO/flow_HDSO{i}.txt'
 
-    #     main(flow_mon, flow_txt)
+        elif modo.strip().upper() == 'SUI':
+            flow_mon = f'switch_SUI_flowmon/switch_HDSO_{i}.flowmon'
+            flow_txt = f'flows_SUI/flow_SUI_{i}.txt'
+        
+        elif modo.strip().upper() == 'ECC':
+            flow_mon = f'switch_ECC_flowmon/switch_ECC_{i}.flowmon'
+            flow_txt = f'flows_ECC/flow_ECC_{i}.txt'
 
-    # flow_mon = f'LTE-Friis.flowmon'
-    # flow_txt = f'LTE-Friis.txt'
-
-    flow_mon = f'LTE-Fabricio.flowmon'
-    flow_txt = f'LTE-Fabricio.txt'
-
-    main(flow_mon, flow_txt)
+        main(flow_mon, flow_txt)
 
     
 
 
-    # # Define o caminho do txt que será gerado de acordo com o algoritmo escolhido
-    # # O txt contém a média das métricas para o dia inteiro(24 horas)
-    # if modo.strip().upper() == 'SA':
-    #     caminho_resultados_dia = f'flows_SA/Resultados_dia.txt'
-    # if modo.strip().upper() == 'HDSO':    
-    #     caminho_resultados_dia = f'flows_HDSO/Resultados_dia.txt'
+    # Define o caminho do txt que será gerado de acordo com o cenário escolhido
+    # O txt contém a média das métricas de todos os arquivos
+    if modo.strip().upper() == 'SA':
+        caminho_media_geral = f'flows_SA/Resultados_dia.txt'
+    elif modo.strip().upper() == 'HDSO':    
+        caminho_media_geral = f'flows_HDSO/Resultados_dia.txt'
 
-    # # Gera um arquivo txt com a média para o dia
-    # resultados_do_dia(caminho_resultados_dia, delay, jitter, pacotes_perdidos, usuarios_nao_atendidos)     
+    # Gera um arquivo txt com a média para o dia (ou a média em relação à quantidade de arquivos flowmon gerados)
+    resultado_geral(quantidade_de_arquivos, caminho_media_geral, delay, jitter, pacotes_perdidos, usuarios_nao_atendidos)
