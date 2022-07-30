@@ -20,13 +20,13 @@ def resultado_geral(quantidade_de_arquivos, flow_resultado_geral, delay, jitter,
         pass
 
     with open(flow_resultado_geral, 'a') as arquivo:
-                    arquivo.write(f'    RESULTADOS DO DIA: \n\n')
+                    arquivo.write(f'    RESULTADO GERAL: \n\n')
 
     with open(flow_resultado_geral, 'a') as arquivo:
-                    arquivo.write(f'Delay médio do dia: {delay_dia:.2f}\n')
+                    arquivo.write(f'Delay Médio Geral: {delay_dia:.2f} ms\n')
     with open(flow_resultado_geral, 'a') as arquivo:
-                    arquivo.write(f'Jitter médio do dia: {jitter_dia:.2f}\n')
+                    arquivo.write(f'Jitter Médio Geral: {jitter_dia:.2f} ms\n')
     with open(flow_resultado_geral, 'a') as arquivo:
-                    arquivo.write(f'Média de pacotes perdidos do dia: {pacotes_perdidos_dia:.2f}%\n')
+                    arquivo.write(f'Média Geral de pacotes perdidos: {pacotes_perdidos_dia:.2f}%\n')
     with open(flow_resultado_geral, 'a') as arquivo:
-                    arquivo.write(f'Média de usuários não atendidos do dia: {usuarios_nao_atendidos_dia:.2f}\n')   
+                    arquivo.write(f'Média de Usuários não Atendidos no Geral: {usuarios_nao_atendidos_dia:.2f}\n')   

@@ -135,7 +135,9 @@ class Flow(object):
             self.txBitrate = float(flow_el.get('txBytes'))*8 / tx_duration
         else:
             self.txBitrate = None
-        lost = float(flow_el.get('lostPackets'))
+        # lost = float(flow_el.get('lostPackets'))
+        lost = txPackets - rxPackets 
+
         #print "rxBytes: %s; txPackets: %s; rxPackets: %s; lostPackets: %s" % (flow_el.get('rxBytes'), txPackets, rxPackets, lost)
         if rxPackets == 0:
             self.packetLossRatio = None
@@ -382,6 +384,10 @@ if __name__ == '__main__':
             break
         elif modo.strip().upper() == 'HDSO':
             break
+        elif modo.strip().upper() == 'SUI':
+            break
+        elif modo.strip().upper() == 'ECC':
+            break
         else:
             print('\nCENÁRIO INCORRETO! TENTE NOVAMENTE.\n')
 
@@ -399,7 +405,7 @@ if __name__ == '__main__':
             flow_txt = f'flows_HDSO/flow_HDSO{i}.txt'
 
         elif modo.strip().upper() == 'SUI':
-            flow_mon = f'switch_SUI_flowmon/switch_HDSO_{i}.flowmon'
+            flow_mon = f'switch_SUI_flowmon/switch_SUI_{i}.flowmon'
             flow_txt = f'resultados_SUI/flow_SUI_{i}.txt'
         
         elif modo.strip().upper() == 'ECC':
@@ -417,6 +423,10 @@ if __name__ == '__main__':
         caminho_media_geral = f'flows_SA/Resultados_dia.txt'
     elif modo.strip().upper() == 'HDSO':    
         caminho_media_geral = f'flows_HDSO/Resultados_dia.txt'
+    elif modo.strip().upper() == 'SUI': 
+        caminho_media_geral = f'resultados_SUI/SUI_resultado_media_geral.txt'
+    elif modo.strip().upper() == 'ECC': 
+        caminho_media_geral = f'resultados_ECC/ECC_resultado_media_geral.txt'
 
     # Gera um arquivo txt com a média para o dia (ou a média em relação à quantidade de arquivos flowmon gerados)
     resultado_geral(quantidade_de_arquivos, caminho_media_geral, delay, jitter, pacotes_perdidos, usuarios_nao_atendidos)
