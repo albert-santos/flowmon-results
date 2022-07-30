@@ -400,11 +400,11 @@ if __name__ == '__main__':
 
         elif modo.strip().upper() == 'SUI':
             flow_mon = f'switch_SUI_flowmon/switch_HDSO_{i}.flowmon'
-            flow_txt = f'flows_SUI/flow_SUI_{i}.txt'
+            flow_txt = f'resultados_SUI/flow_SUI_{i}.txt'
         
         elif modo.strip().upper() == 'ECC':
             flow_mon = f'switch_ECC_flowmon/switch_ECC_{i}.flowmon'
-            flow_txt = f'flows_ECC/flow_ECC_{i}.txt'
+            flow_txt = f'resultados_ECC/flow_ECC_{i}.txt'
 
         main(flow_mon, flow_txt)
 
