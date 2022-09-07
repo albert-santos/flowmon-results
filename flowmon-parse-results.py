@@ -231,11 +231,11 @@ def main(flow_mon, flow_txt):
     with open(flow_txt, 'a') as arquivo:
                     arquivo.write(' done.\n')
 
-    tx_bitrate = 0
-    rx_bitrate = 0
-    mean_delay = 0
-    mean_jitter = 0
-    packet_loss_ratio = 0
+    tx_bitrate = []
+    rx_bitrate = []
+    mean_delay = []
+    mean_jitter = []
+    packet_loss_ratio = []
     numero_flows = 0
     contador_usuarios_nao_atendidos = 0
     contador_tcp = 0
@@ -262,7 +262,7 @@ def main(flow_mon, flow_txt):
                     arquivo.write("\tTX bitrate: %.2f kbit/s\n" % (flow.txBitrate*1e-3,))
 
                 if proto == 'UDP':
-                    tx_bitrate += (flow.txBitrate*1e-3)
+                    tx_bitrate.append(flow.txBitrate*1e-3)
 
                 if proto == 'TCP':
                     contador_tcp += 1
@@ -281,7 +281,7 @@ def main(flow_mon, flow_txt):
                     arquivo.write("\tRX bitrate: %.2f kbit/s\n" % (flow.rxBitrate*1e-3,))
 
                 if proto == 'UDP':
-                    rx_bitrate += (flow.rxBitrate*1e-3)
+                    rx_bitrate.append(flow.rxBitrate*1e-3)
 
             if flow.delayMean is None:
                 print("\tMean Delay: None")
@@ -294,7 +294,7 @@ def main(flow_mon, flow_txt):
                     arquivo.write("\tMean Delay: %.2f ms\n" % (flow.delayMean*1e3,))
                 
                 if proto == 'UDP':
-                    mean_delay += (flow.delayMean*1e3)
+                    mean_delay.append(flow.delayMean*1e3)
 
             if flow.jitterMean is None:
                 print("\tMean Jitter: None")
@@ -307,7 +307,7 @@ def main(flow_mon, flow_txt):
                     arquivo.write("\tMean Jitter: %.2f ms\n" % (flow.jitterMean*1e3,))
 
                 if proto == 'UDP':
-                    mean_jitter += (flow.jitterMean*1e3)
+                    mean_jitter.append(flow.jitterMean*1e3)
 
             if flow.packetLossRatio is None:
                 print ("\tPacket Loss Ratio: None")
@@ -321,42 +321,45 @@ def main(flow_mon, flow_txt):
                     arquivo.write("\tPacket Loss Ratio: %.2f %%\n" % (flow.packetLossRatio*100))
 
                 if proto == 'UDP':
-                    packet_loss_ratio += flow.packetLossRatio
+                    packet_loss_ratio.append(flow.packetLossRatio)
             
             numero_flows += 1
 
     numero_usuarios = numero_flows - contador_tcp # Retirando comunicações TCP
 
-    tx_bitrate = tx_bitrate / numero_usuarios
-    rx_bitrate = rx_bitrate / numero_usuarios
-    mean_delay = mean_delay / numero_usuarios
-    mean_jitter = mean_jitter / numero_usuarios
-    packet_loss_ratio = packet_loss_ratio / numero_usuarios
+    final_tx_bitrate = sum(tx_bitrate) / numero_usuarios
+    final_rx_bitrate = sum(rx_bitrate) / numero_usuarios
+    final_mean_delay = sum(mean_delay) / numero_usuarios
+    final_mean_jitter = sum(mean_jitter) / numero_usuarios
+    final_packet_loss_ratio = sum(packet_loss_ratio) / numero_usuarios
 
     with open(flow_txt, 'a') as arquivo:
                     arquivo.write(f'\n\n    MÉTRICAS NO GERAL: \n')
 
     with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'TX bitrate média: {tx_bitrate:.2f} kbit/s\n')
+                    arquivo.write(f'TX bitrate média: {final_tx_bitrate:.2f} kbit/s\n')
 
     with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'RX bitrate média: {rx_bitrate:.2f} kbit/s\n')
+                    arquivo.write(f'RX bitrate média: {final_rx_bitrate:.2f} kbit/s\n')
 
     with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'Delay Médio: {mean_delay:.2f} ms\n')
-                    delay.append(mean_delay)
+                    arquivo.write(f'Delay Médio: {final_mean_delay:.2f} ms\n')
+                    delay.append(final_mean_delay)
 
     with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'Jitter Médio: {mean_jitter:.2f} ms\n')
-                    jitter.append(mean_jitter)
+                    arquivo.write(f'Jitter Médio: {final_mean_jitter:.2f} ms\n')
+                    jitter.append(final_mean_jitter)
 
     with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'Média da taxa de pacotes perdidos: {packet_loss_ratio*100:.2f}%\n')
-                    pacotes_perdidos.append(packet_loss_ratio*100)
+                    arquivo.write(f'Média da taxa de pacotes perdidos: {final_packet_loss_ratio*100:.2f}%\n')
+                    pacotes_perdidos.append(final_packet_loss_ratio*100)
 
     with open(flow_txt, 'a') as arquivo:
                     arquivo.write(f'Usuários não atendidos: {contador_usuarios_nao_atendidos}\n')
                     usuarios_nao_atendidos.append(contador_usuarios_nao_atendidos)
+
+
+    return tx_bitrate, rx_bitrate, mean_delay, mean_jitter, packet_loss_ratio
 
 
 if __name__ == '__main__':
@@ -412,7 +415,7 @@ if __name__ == '__main__':
             flow_mon = f'switch_ECC_flowmon/switch_ECC_{i}.flowmon'
             flow_txt = f'resultados_ECC/flow_ECC_{i}.txt'
 
-        main(flow_mon, flow_txt)
+        tx_bitrate, rx_bitrate, mean_delay, mean_jitter, packet_loss_ratio = main(flow_mon, flow_txt)
 
     
 
