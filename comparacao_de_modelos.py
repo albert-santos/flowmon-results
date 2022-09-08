@@ -1,5 +1,6 @@
 from __future__ import division
-from resultado_geral import resultado_geral
+import pandas as pd
+from create_dataset import create_dataset
 import sys
 import os
 try:
@@ -236,8 +237,7 @@ def main(flow_mon, flow_txt):
     mean_delay = []
     mean_jitter = []
     packet_loss_ratio = []
-    numero_usuarios_cobertos = 0
-    total_numero_usuarios = 0
+    numero_flows = 0
     contador_usuarios_nao_atendidos = 0
     contador_tcp = 0
 
@@ -323,43 +323,8 @@ def main(flow_mon, flow_txt):
 
                 if proto == 'UDP':
                     packet_loss_ratio.append(flow.packetLossRatio)
-                    numero_usuarios_cobertos += 1
             
-            total_numero_usuarios += 1
-
-    total_numero_usuarios = total_numero_usuarios - contador_tcp # Retirando comunicações TCP
-
-
-    final_tx_bitrate = sum(tx_bitrate) / total_numero_usuarios
-    final_rx_bitrate = sum(rx_bitrate) / numero_usuarios_cobertos
-    final_mean_delay = sum(mean_delay) / numero_usuarios_cobertos
-    final_mean_jitter = sum(mean_jitter) / numero_usuarios_cobertos
-    final_packet_loss_ratio = sum(packet_loss_ratio) / numero_usuarios_cobertos
-
-    with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'\n\n    MÉTRICAS NO GERAL: \n')
-
-    with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'TX bitrate média: {final_tx_bitrate:.2f} kbit/s\n')
-
-    with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'RX bitrate média: {final_rx_bitrate:.2f} kbit/s\n')
-
-    with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'Delay Médio: {final_mean_delay:.2f} ms\n')
-                    delay.append(final_mean_delay)
-
-    with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'Jitter Médio: {final_mean_jitter:.2f} ms\n')
-                    jitter.append(final_mean_jitter)
-
-    with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'Média da taxa de pacotes perdidos: {final_packet_loss_ratio*100:.2f}%\n')
-                    pacotes_perdidos.append(final_packet_loss_ratio*100)
-
-    with open(flow_txt, 'a') as arquivo:
-                    arquivo.write(f'Usuários não atendidos: {contador_usuarios_nao_atendidos}\n')
-                    usuarios_nao_atendidos.append(contador_usuarios_nao_atendidos)
+            numero_flows += 1
 
 
     return tx_bitrate, rx_bitrate, mean_delay, mean_jitter, packet_loss_ratio
@@ -373,65 +338,52 @@ if __name__ == '__main__':
     print('FLOWMON PARSE RESULTS:'.center(50))
     print(linha)
 
-    delay = []
-    jitter = []
-    pacotes_perdidos = []
-    usuarios_nao_atendidos = []
+
+    df_metrics = pd.DataFrame()
 
     # Laço que contém o input que pede para o usuário informar o cenário que será utilizado
     # O laço é quebrado apenas quando o usuário informa um cenário correto
     while(1):
 
         # modo corresponde ao cenário que será executado
-        modo = str(input('Indique o cenário (Opcões: SA, HDSO, SUI e ECC): '))
         quantidade_de_arquivos = int(input('Indique a quantidade de arquivos flowmon: '))
-
-        if modo.strip().upper() == 'SA':
+        
+        if(type(quantidade_de_arquivos)) == int:
             break
-        elif modo.strip().upper() == 'HDSO':
-            break
-        elif modo.strip().upper() == 'SUI':
-            break
-        elif modo.strip().upper() == 'ECC':
-            break
-        else:
-            print('\nCENÁRIO INCORRETO! TENTE NOVAMENTE.\n')
 
     # Obtém as informações da quantidade de arquivos do cenário escolhido
     # A sáida para cada arquivo será um arquivo txt com as métricas de cada usuário e a média das métricas para esse arquivo
     # Os arquivos flowmon são gerados pela simulação no NS-3
     for i in range(1, quantidade_de_arquivos + 1):
 
-        if modo.strip().upper() == 'SA': 
-            flow_mon = f'switch_SA_flowmon/switch_SA{i}.flowmon'
-            flow_txt = f'flows_SA/flow_SA{i}.txt'
-
-        elif modo.strip().upper() == 'HDSO':
-            flow_mon = f'switch_HDSO_flowmon/switch_HDSO{i}.flowmon'
-            flow_txt = f'flows_HDSO/flow_HDSO{i}.txt'
-
-        elif modo.strip().upper() == 'SUI':
-            flow_mon = f'switch_SUI_flowmon/switch_SUI_{i}.flowmon'
-            flow_txt = f'resultados_SUI/flow_SUI_{i}.txt'
-        
-        elif modo.strip().upper() == 'ECC':
-            flow_mon = f'switch_ECC_flowmon/switch_ECC_{i}.flowmon'
-            flow_txt = f'resultados_ECC/flow_ECC_{i}.txt'
+        flow_mon = f'switch_SUI_flowmon/switch_SUI_{i}.flowmon'
+        flow_txt = f'flow_SUI_{i}.txt'
+        model = 'SUI'
 
         tx_bitrate, rx_bitrate, mean_delay, mean_jitter, packet_loss_ratio = main(flow_mon, flow_txt)
 
+        df_per_hour = create_dataset(tx_bitrate, rx_bitrate, mean_delay, mean_jitter, packet_loss_ratio, i, model)
 
+        
+        df_metrics = pd.concat([df_metrics, df_per_hour])
 
-    # Define o caminho do txt que será gerado de acordo com o cenário escolhido
-    # O txt contém a média das métricas de todos os arquivos
-    if modo.strip().upper() == 'SA':
-        caminho_media_geral = f'flows_SA/Resultados_dia.txt'
-    elif modo.strip().upper() == 'HDSO':    
-        caminho_media_geral = f'flows_HDSO/Resultados_dia.txt'
-    elif modo.strip().upper() == 'SUI': 
-        caminho_media_geral = f'resultados_SUI/SUI_resultado_media_geral.txt'
-    elif modo.strip().upper() == 'ECC': 
-        caminho_media_geral = f'resultados_ECC/ECC_resultado_media_geral.txt'
+        print(df_metrics)
+    
+    for i in range(1, quantidade_de_arquivos + 1):
 
-    # Gera um arquivo txt com a média para o dia (ou a média em relação à quantidade de arquivos flowmon gerados)
-    resultado_geral(quantidade_de_arquivos, caminho_media_geral, delay, jitter, pacotes_perdidos, usuarios_nao_atendidos)
+        flow_mon = f'switch_ECC_flowmon/switch_ECC_{i}.flowmon'
+        flow_txt = f'flow_ECC_{i}.txt'
+        model = 'ECC'
+
+        tx_bitrate, rx_bitrate, mean_delay, mean_jitter, packet_loss_ratio = main(flow_mon, flow_txt)
+
+        df_per_hour = create_dataset(tx_bitrate, rx_bitrate, mean_delay, mean_jitter, packet_loss_ratio, i, model)
+
+        
+        df_metrics = pd.concat([df_metrics, df_per_hour])
+
+    print(df_metrics)
+    df_metrics.to_csv("df_metrics.csv", index=False)
+
+    
+

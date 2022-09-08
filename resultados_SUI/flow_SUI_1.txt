@@ -4420,8 +4420,8 @@ FlowID: 736 (UDP 7.0.2.209/49153 --> 1.0.0.2/900)
 
     MÉTRICAS NO GERAL: 
 TX bitrate média: 171.17 kbit/s
-RX bitrate média: 62.68 kbit/s
-Delay Médio: 388.23 ms
-Jitter Médio: 77.62 ms
-Média da taxa de pacotes perdidos: 25.54%
+RX bitrate média: 102.80 kbit/s
+Delay Médio: 636.73 ms
+Jitter Médio: 127.31 ms
+Média da taxa de pacotes perdidos: 41.89%
 Usuários não atendidos: 297
