@@ -1,6 +1,6 @@
     RESULTADO GERAL: 
 
-Delay Médio Geral: 322.37 ms
-Jitter Médio Geral: 85.63 ms
-Média Geral de pacotes perdidos: 21.06%
-Média de Usuários não Atendidos no Geral: 180.00
+Delay Médio Geral: 91.52 ms
+Jitter Médio Geral: 35.03 ms
+Média Geral de pacotes perdidos: 7.10%
+Média de Usuários não Atendidos no Geral: 100.00
