@@ -400,6 +400,7 @@ if __name__ == '__main__':
     # Obtém as informações da quantidade de arquivos do cenário escolhido
     # A sáida para cada arquivo será um arquivo txt com as métricas de cada usuário e a média das métricas para esse arquivo
     # Os arquivos flowmon são gerados pela simulação no NS-3
+    
     for i in range(1, quantidade_de_arquivos + 1):
 
         if modo.strip().upper() == 'SA': 
