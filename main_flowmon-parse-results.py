@@ -409,12 +409,12 @@ if __name__ == '__main__':
     for i in range(1, quantidade_de_arquivos + 1):
 
         if modo.strip().upper() == 'SA': 
-            flow_mon = f'switch_SA_flowmon/switch_SA{i}.flowmon'
+            flow_mon = f'switch_SA_flowmon/switch_SA_{i}.flowmon'
             flow_txt = f'flows_SA/flow_SA{i}.txt'
             model = 'SA'
 
         elif modo.strip().upper() == 'HDSO':
-            flow_mon = f'switch_HDSO_flowmon/switch_HDSO{i}.flowmon'
+            flow_mon = f'switch_HDSO_flowmon/switch_HDSO_{i}.flowmon'
             flow_txt = f'flows_HDSO/flow_HDSO{i}.txt'
             model = 'HDSO'
 
