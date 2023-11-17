@@ -265,13 +265,14 @@ def main(flow_mon, flow_txt):
                     arquivo.write("\tTX bitrate: %.2f kbit/s\n" % (flow.txBitrate*1e-3,))
 
                 if proto == 'UDP':
-                    tx_bitrate.append(flow.txBitrate*1e-3)
+                    if flow.rxBitrate is not None:
+                        tx_bitrate.append(round(flow.txBitrate*1e-3))
 
                 if proto == 'TCP':
                     contador_tcp += 1
 
 
-            if flow.rxBitrate is None:
+            if (flow.rxBitrate is None) or (flow.packetLossRatio*100 >= 80):
                 print("\tRX bitrate: None")
                 with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tRX bitrate: None\n")
@@ -286,7 +287,7 @@ def main(flow_mon, flow_txt):
                 if proto == 'UDP':
                     rx_bitrate.append(flow.rxBitrate*1e-3)
 
-            if flow.delayMean is None:
+            if flow.delayMean is None or (flow.packetLossRatio*100 >= 80):
                 print("\tMean Delay: None")
                 with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tMean Delay: None\n")
@@ -299,7 +300,7 @@ def main(flow_mon, flow_txt):
                 if proto == 'UDP':
                     mean_delay.append(flow.delayMean*1e3)
 
-            if flow.jitterMean is None:
+            if flow.jitterMean is None or (flow.packetLossRatio*100 >= 80):
                 print("\tMean Jitter: None")
                 with open(flow_txt, 'a') as arquivo:
                     arquivo.write("\tMean Jitter: None\n")
@@ -312,7 +313,7 @@ def main(flow_mon, flow_txt):
                 if proto == 'UDP':
                     mean_jitter.append(flow.jitterMean*1e3)
 
-            if flow.packetLossRatio is None:
+            if flow.packetLossRatio is None or (flow.packetLossRatio*100 >= 80):
                 print ("\tPacket Loss Ratio: None")
 
                 with open(flow_txt, 'a') as arquivo:
