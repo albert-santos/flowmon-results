@@ -389,7 +389,7 @@ if __name__ == '__main__':
     while(1):
 
         # modo corresponde ao cenário que será executado
-        modo = str(input('Indique o cenário (Opcões: SA, HDSO, SUI e ECC): '))
+        modo = str(input('Indique o cenário (Opcões: SA, HDSO, SUI, ECC e UAV): '))
         quantidade_de_arquivos = int(input('Indique a quantidade de arquivos flowmon: '))
 
         if modo.strip().upper() == 'SA':
@@ -399,6 +399,8 @@ if __name__ == '__main__':
         elif modo.strip().upper() == 'SUI':
             break
         elif modo.strip().upper() == 'ECC':
+            break
+        elif modo.strip().upper() == 'UAV':
             break
         else:
             print('\nCENÁRIO INCORRETO! TENTE NOVAMENTE.\n')
@@ -429,6 +431,11 @@ if __name__ == '__main__':
             flow_txt = f'resultados_ECC/flow_ECC_{i}.txt'
             model = 'ECC'
 
+        elif modo.strip().upper() == 'UAV':
+            flow_mon = f'switch.flowmon'
+            flow_txt = f'UAV_Result_flow.txt'
+            model = 'UAV'
+
         # Função principal que obtém as métricas médias de cada usuário
         tx_bitrate, rx_bitrate, mean_delay, mean_jitter, packet_loss_ratio = main(flow_mon, flow_txt)
         # Dataframe com as métricas para a hora i
@@ -452,6 +459,9 @@ if __name__ == '__main__':
         caminho_media_geral = f'resultados_SUI/SUI_resultado_media_geral.txt'
     elif modo.strip().upper() == 'ECC': 
         caminho_media_geral = f'resultados_ECC/ECC_resultado_media_geral.txt'
+    elif modo.strip().upper() == 'UAV': 
+        caminho_media_geral = f'UAV_resultado_media_geral.txt'
+        
 
     # Gera um arquivo txt com a média para o dia (ou a média em relação à quantidade de arquivos flowmon gerados)
     resultado_geral(quantidade_de_arquivos, caminho_media_geral, delay, jitter, pacotes_perdidos, usuarios_nao_atendidos)
